@@ -30,7 +30,10 @@ jobs:
 
       - name: Export Android Home
         run: |
-          echo "ANDROID_HOME=/opt/android-sdk" >> $GITHUB_ENV
+          # use this for act
+          # echo "ANDROID_HOME=/opt/android-sdk" >> $GITHUB_ENV
+          # use this for github actions
+          echo "ANDROID_HOME=/usr/local/lib/android/sdk" >> $GITHUB_ENV
           echo "PATH=/opt/android-sdk/cmdline-tools/latest/bin:/opt/android-sdk/platform-tools:$PATH" >> $GITHUB_ENV
 
       - name: Build SFML
